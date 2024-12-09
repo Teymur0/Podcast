@@ -1,0 +1,33 @@
+﻿@model TopicCreateViewModel
+
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <p class="card-description">
+                Create Topic
+            </p>
+            <form method="post" class="forms-sample" enctype="multipart/form-data">
+                <div class="text-danger" asp-validation-summary="All"></div>
+
+                <div class="form-group">
+                    <label for="exampleInputUsername1">Name</label>
+                    <input class="form-control" id="input1" asp-for="Name" placeholder="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="exampleInputUsername1">Cover Image</label>
+                    <input class="form-control" id="input1" asp-for="CoverFile" placeholder="Image">
+                    <span asp-validation-for="CoverFile" class="text-danger"></span>
+                </div>
+
+
+
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
